@@ -5,8 +5,8 @@
 GET http://localhost:4004/odata/v4/catalog/Books
 
 ###
-# Browse book by ID
-GET http://localhost:4004/odata/v4/catalog/Books(1)
+# Browse book by ID 
+GET http://localhost:4004/odata/v4/catalog/Books(1) 
 
 # Add data using post call
 
