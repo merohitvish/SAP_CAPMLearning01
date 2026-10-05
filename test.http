@@ -1,0 +1,53 @@
+###
+#
+#Browse Books
+#
+GET http://localhost:4004/odata/v4/catalog/Books
+
+###
+# Browse book by ID
+GET http://localhost:4004/odata/v4/catalog/Books(1)
+
+# Add data using post call
+
+###
+
+POST http://localhost:4004/odata/v4/catalog/Books
+Content-Type: application/json
+
+{
+      "ID": "3",
+      "title": "Atomic Habbits",
+      "author": "Rohit",
+      "price": "101",
+      "stock": 1000
+}
+
+# To update existing data we use PUT method call , PUT changes entire resource while PATCH only partial changes resource.
+
+###
+PUT http://localhost:4004/odata/v4/catalog/Books(3)
+Content-Type: application/json
+
+{
+      "title": "Atomic Habbits",
+      "author": "Rohit",
+      "price": "11",
+      "stock": 1000
+}
+
+###
+PATCH http://localhost:4004/odata/v4/catalog/Books(3)
+Content-Type: application/json
+
+{
+      "title": "Atomic Habbits",
+      "author": "Rohit",
+      "price": "112",
+      "stock": 1000
+}
+
+# Remove data USING DELETE method
+
+###
+DELETE http://localhost:4004/odata/v4/catalog/Books(4)
